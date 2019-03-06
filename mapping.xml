@@ -1,0 +1,26 @@
+<beanio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.beanio.org/2012/03"
+        xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">
+
+    <!-- 'format' identifies the type of stream -->
+    <stream name="biometricData" format="csv">
+        <parser>
+            <property name="delimiter" value="|"/>
+        </parser>
+        <!-- Detail records are bound to example.Contact -->
+        <record name="record" class="field.BiometricData" order="2">
+            <field name="biometricRefId" />
+            <field name="documentId" />
+            <field name="documentIdType" />
+            <field name="biometricData" />
+            <field name="biometricDataFormat" />
+            <field name="biometricDataMethod" />
+            <field name="biometricDataSource" />
+            <field name="timestamp" />
+            <field name="date" />
+            <field name="channel" />
+        </record>
+
+    </stream>
+
+</beanio>
